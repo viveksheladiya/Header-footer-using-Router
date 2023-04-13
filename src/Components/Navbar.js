@@ -1,11 +1,9 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
-import About from "./About";
-import Home from "./Home";
+import { Link } from "react-router-dom";
 
-const Navbar = () => {
+export default function Navbar() {
   return (
-    <Router>
+    <div>
       <div>
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
           <Link className="navbar-brand" to="/">
@@ -26,7 +24,7 @@ const Navbar = () => {
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav mr-auto">
               <li className="nav-item active">
-                <Link className="nav-link" to="/home">
+                <Link className="nav-link" to="/">
                   Home
                 </Link>
               </li>
@@ -39,14 +37,6 @@ const Navbar = () => {
           </div>
         </nav>
       </div>
-      <div>
-        <Routes>
-          <Route exact path="/home" element={<Home />}></Route>
-          <Route exact path="/about" element={<About />}></Route>
-        </Routes>
-      </div>
-    </Router>
+    </div>
   );
-};
-
-export default Navbar;
+}
