@@ -1,9 +1,9 @@
 import "./App.css";
-import About from "./Components/About";
-import Footer from "./Components/Footer";
 import Home from "./Components/Home";
+import { Login } from "./Components/Login";
 import Navbar from "./Components/Navbar";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Signup } from "./Components/Signup";
 
 function App() {
   return (
@@ -12,10 +12,10 @@ function App() {
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/signup" element={<Signup />} />
         </Routes>
       </Router>
-      <Footer />
     </>
   );
 }
